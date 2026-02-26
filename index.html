@@ -1,24 +1,183 @@
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Test Event App</title>
-  <link rel="manifest" href="/manifest.json">
-  <link rel="apple-touch-icon" href="https://via.placeholder.com/180?text=Event"> <!-- Ikonka -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tadbir 2025 – Ilova</title>
+  
+  <!-- PWA uchun zarur -->
+  <link rel="manifest" href="/manifest.json"/>
+  <meta name="theme-color" content="#4f46e5"/>
+  <link rel="apple-touch-icon" href="/icon-192.png"/> <!-- Ikonka qo'ying -->
+  
+  <!-- Google Fonts (zamonaviy shrift) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: rgba(30, 41, 59, 0.6);
+      --text: #e2e8f0;
+      --accent: #6366f1;
+      --accent-dark: #4f46e5;
+      --blur: blur(16px);
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 1.5rem;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 420px; /* telefon uchun ideal */
+      margin: 0 auto;
+    }
+    header {
+      text-align: center;
+      padding: 2rem 0 1.5rem;
+    }
+    .logo {
+      font-size: 2.5rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, #a78bfa, #6366f1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .tagline {
+      font-size: 1.1rem;
+      opacity: 0.8;
+      margin-top: 0.5rem;
+    }
+    .card {
+      background: var(--card-bg);
+      backdrop-filter: var(--blur);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 1.25rem;
+      padding: 1.75rem;
+      margin: 1.5rem 0;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    }
+    h2 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      color: #c7d2fe;
+    }
+    .features {
+      display: grid;
+      gap: 1rem;
+    }
+    .feature {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 1rem;
+    }
+    .icon {
+      font-size: 1.8rem;
+      width: 50px;
+      height: 50px;
+      background: rgba(99,102,241,0.15);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .install-guide {
+      background: linear-gradient(135deg, rgba(99,102,241,0.15), rgba(79,70,229,0.1));
+      border-radius: 1rem;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      text-align: center;
+    }
+    .btn {
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 999px;
+      cursor: pointer;
+      margin: 1.5rem auto 0;
+      display: block;
+      transition: all 0.3s;
+    }
+    .btn:hover { background: var(--accent-dark); transform: translateY(-2px); }
+    .guide-steps {
+      text-align: left;
+      margin-top: 1.5rem;
+      font-size: 0.95rem;
+    }
+    .guide-steps ol { padding-left: 1.5rem; }
+    .guide-steps li { margin-bottom: 0.8rem; }
+    
+    @media (min-width: 768px) {
+      .container { max-width: 700px; }
+    }
+  </style>
 </head>
 <body>
-  <h1>Tadbir Test Ilovasi</h1>
-  <p>QR skan qilganda shu sahifa ochiladi. Endi uni ilova qilib o'rnating!</p>
-  
-  <h2>iPhone uchun ko'rsatma (Safari'da):</h2>
-  <ol>
-    <li>Pastdagi <strong>Share</strong> tugmasini bosing (kvadrat ichida ↑ strelka).</li>
-    <li>Menyuda pastga suring va <strong>Add to Home Screen</strong> ni tanlang.</li>
-    <li>Nomini o'zgartirib (masalan, "Tadbir 2025"), <strong>Add</strong> ni bosing.</li>
-    <li>Tayyor! Home screenda ikonka paydo bo'ladi – bosib oching, app kabi ishlaydi.</li>
-  </ol>
-  
-  <p>Agar Open as Web App toggle chiqsa – uni yoqib qo'ying (PWA rejimi uchun).</p>
+
+  <div class="container">
+    <header>
+      <div class="logo">Tadbir 2025</div>
+      <div class="tagline">Kuala Lumpur – Dunyo ijtimoiy xavfsizlik forumi</div>
+    </header>
+
+    <div class="card">
+      <h2>Xush kelibsiz!</h2>
+      <p>Bu ilova orqali dastur, spikerlar, innovation zone, networking (QR orqali) va floorplanni ko'rishingiz mumkin.</p>
+    </div>
+
+    <div class="card">
+      <h2>Asosiy imkoniyatlar</h2>
+      <div class="features">
+        <div class="feature">
+          <div class="icon">📅</div>
+          <div>Dastur va interaktiv sessiyalar</div>
+        </div>
+        <div class="feature">
+          <div class="icon">🧑‍🤝‍🧑</div>
+          <div>Networking – My QR CODE bilan bog'laning</div>
+        </div>
+        <div class="feature">
+          <div class="icon">💡</div>
+          <div>Innovation Zone va floorplan</div>
+        </div>
+        <div class="feature">
+          <div class="icon">🎤</div>
+          <div>Spikerlar va mahsulotlar</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="install-guide">
+      <h2>Ilovani telefoningizga o'rnating</h2>
+      <p>Safari brauzerida (iPhone/iPad):</p>
+      <div class="guide-steps">
+        <ol>
+          <li>Pastdagi <strong>Share</strong> tugmasini bosing (kvadrat + ↑ strelka)</li>
+          <li>Pastga surib <strong>Add to Home Screen</strong> ni tanlang</li>
+          <li>Nomini saqlab <strong>Add</strong> ni bosing</li>
+        </ol>
+      </div>
+      <p>Androidda: avto taklif chiqadi yoki menyudan "Add to home screen".</p>
+      <button class="btn" onclick="alert('Bu demo – real ilovada bu tugma avto installni boshqaradi!')">Ilovani o'rnatish</button>
+    </div>
+  </div>
+
+  <!-- Service Worker ro'yxatdan o'tkazish -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(reg => console.log('Service Worker registered'))
+          .catch(err => console.log('Service Worker error:', err));
+      });
+    }
+  </script>
 </body>
 </html>
