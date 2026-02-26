@@ -1,20 +1,23 @@
 {
-  "name": "Test Tadbir App",
-  "short_name": "TadbirTest",
+  "name": "Tadbir 2025 – Ilova",
+  "short_name": "Tadbir2025",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#000000",
+  "background_color": "#0f172a",
+  "theme_color": "#6366f1",
+  "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "https://via.placeholder.com/192?text=Event",
+      "src": "https://via.placeholder.com/192/6366f1/ffffff?text=T25",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
-      "src": "https://via.placeholder.com/512?text=Event",
+      "src": "https://via.placeholder.com/512/6366f1/ffffff?text=T25",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
 }
