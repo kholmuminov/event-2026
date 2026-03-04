@@ -62,9 +62,10 @@
     }
     .columns {
     display: grid;
-    grid-template-columns: 1fr; /* default: bitta ustun (kichik telefon) */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));  /* Avto: kichik ekranda 1, o'rta/katta da 2+ ustun */
     gap: 1.5rem;
     padding: 0 1.5rem;
+    margin: 1rem 0;
     }
     @media (min-width: 560px) {
     .columns {
@@ -87,6 +88,7 @@
       text-align: center;
       transition: all 0.3s;
       cursor: pointer;
+      min-width: 0;
     }
     .item:hover {
       transform: translateY(-4px);
@@ -249,4 +251,5 @@
   </script>
 </body>
 </html>
+
 
