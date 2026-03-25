@@ -62,39 +62,46 @@
     }
     .columns {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));  /* Avto: kichik ekranda 1, o'rta/katta da 2+ ustun */
-    gap: 1.5rem;
-    padding: 0 1.5rem;
-    margin: 1rem 0;
-    }
-    @media (min-width: 560px) {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 14px;
+    padding: 0 16px;
+    margin: 20px 0;
+  }
+
+  /* Agar telefon portraitda hali ham bitta chiqsa, majburiy ikki ustun qilamiz */
+  @media (max-width: 600px) {
     .columns {
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: 1fr 1fr;   /* Majburiy 2 ustun */
     }
-    }
+  }
     .column {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     }
     .item {
-      background: var(--card);
-      backdrop-filter: var(--blur);
-      border: 1px solid var(--border);
-      border-radius: 1rem;
-      padding: 1.2rem;
-      font-size: 1.05rem;
-      font-weight: 500;
-      text-align: center;
-      transition: all 0.3s;
-      cursor: pointer;
-      min-width: 0;
-    }
-    .item:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 32px rgba(0,0,0,0.5);
-      border-color: var(--accent);
-    }
+    background: var(--card);
+    backdrop-filter: var(--blur);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 16px 12px;
+    font-size: 15.5px;
+    font-weight: 500;
+    text-align: center;
+    transition: all 0.3s;
+    cursor: pointer;
+    min-height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.3;
+    height: 55px;
+  }
+  .item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    border-color: var(--accent);
+  }
     .organizer {
       text-align: center;
       margin: 2.5rem 0 1.5rem;
